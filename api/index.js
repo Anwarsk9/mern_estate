@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import userRouter from "./routes/user.route.js"
 
 dotenv.config();
 
@@ -13,9 +14,7 @@ mongoose
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("hello");
-});
+app.use("/user", userRouter);
 
 app.listen("8080", () => {
   console.log("server is running on 8080!!");
