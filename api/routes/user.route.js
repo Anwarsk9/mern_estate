@@ -6,6 +6,6 @@ router.get("/", (req, res) => {
   res.send({ title: "home" });
 });
 
-router.post("/test", saveUser);
+router.post("/signup", saveUser);
 
 export default router;

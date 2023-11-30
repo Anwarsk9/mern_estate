@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
           <Link to="/sign-up">
             <li className="sm:inline text-slate-700 hover:underline">
-              Sign in
+              Signup
             </li>
           </Link>
         </ul>
