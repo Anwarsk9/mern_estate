@@ -7,6 +7,5 @@ export let saveUser = wrapAsync(async (req, res) => {
   let hashPassword = bcryptejs.hashSync(password, 10);
   let newUser = new User({ username, email, password: hashPassword });
   await newUser.save();
-  console.log(req.body);
-  res.send(newUser);
+  res.send("User Created Succesfully!");
 });
