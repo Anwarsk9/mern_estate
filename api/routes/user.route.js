@@ -1,8 +1,11 @@
 import express from "express";
-import { sendindHello } from "../controller/user.controller.js";
-
 const router = express.Router();
+import { saveUser } from "../controller/user.controller.js";
 
-router.get("/test", sendindHello);
+router.get("/", (req, res) => {
+  res.send({ title: "home" });
+});
+
+router.post("/test", saveUser);
 
 export default router;

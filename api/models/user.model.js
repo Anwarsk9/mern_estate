@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
-const Schema = mongoose.Schema;
 
-const userSchema = new Schema(
+let userSchema = new mongoose.Schema(
   {
-    userName: {
+    username: {
       type: String,
       required: true,
       unique: true,
